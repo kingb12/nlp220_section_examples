@@ -13,7 +13,7 @@ if __name__ == '__main__':
     for item in dataset:
         # key miss: count is, increment by 1 and save to key
         # key hit: count is retrieved, incremented by 1, saved
-        label_counter[item['label_text']] += 1  # Does not need to be an int! Can use floats (e.g. log-probs), if you're using Counter to store scores 
+        label_counter[item['label_text']] += 1  # Does not need to be an int! Can use floats (e.g. log-probs)
     
     # pprint() == pretty print. pprint module also has functions like pformat, which is pprint, but returns the string instead of printing
     print("\n===== All label counts in SetFit/20_newsgroups (train) =====\n")
