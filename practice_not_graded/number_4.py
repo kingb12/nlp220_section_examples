@@ -39,7 +39,7 @@ df: pd.DataFrame = pd.read_csv(os.path.join(data_dir, "iris.data"), names=
 
 # now we need to make this a binary classification problem somehow, despite 3 species. Wee'll do setosa vs. non-setosa
 df['label'] = df['species'] == 'Iris-setosa'
-assert 1 > df['label'].mean() >= 0, "expected points in each class"
+assert 1 > df['label'].mean() > 0, "expected points in each class"
 
 # another problem: we have continuous features. Two choices: 
 # 1) convert to discrete features and use the familiar Multinomial NB
